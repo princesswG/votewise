@@ -6,7 +6,7 @@ function HomeScreen(){
     return(
        
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',fontWeight: 'bold', fontSize: 20}}>
-            <Text>Welcome <br/> VOTE WISE</Text>
+            <Text>Welcome VOTE WISE</Text>
         </View>
       
     );

@@ -8,7 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import PresidentScreen from './screens/PresidentScreen';
 import RepresentativeScreen from './screens/RepresentativeScreen';
 import SenatorScreen from './screens/SenatorScreen';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
 const Tab = createBottomTabNavigator();
@@ -24,12 +24,20 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused
-                ? 'ios-information-circle'
-                : 'ios-information-circle-outline';
+                ? 'home': 'home';
+            }
+            else if (route.name === 'Presidents') {
+              iconName = focused ? 'users' : 'users';
+            }
+            else if (route.name === 'Representatives') {
+              iconName = focused ? 'users' : 'users';
+            }
+            else if (route.name === 'Senators') {
+              iconName = focused ? 'users' : 'users';
             }
 
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <FontAwesome name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',
@@ -38,7 +46,8 @@ export default function App() {
 
     <Tab.Screen name='Home' component={HomeScreen} />
     <Tab.Screen name='Presidents' component={PresidentScreen}/>
-    
+    <Tab.Screen name='Representatives' component={RepresentativeScreen}/>
+    <Tab.Screen name='Senators' component={SenatorScreen}/>
     </Tab.Navigator>
   </NavigationContainer>
   );
