@@ -4,12 +4,12 @@ import {View, Text} from 'react-native';
 
 function HomeScreen(){
     return(
-        <>
+       
         <View>
             <Text>this is the home screen</Text>
         </View>
-        </>
-    )
+      
+    );
 }
 
 // const styles = StyleSheet.create({
