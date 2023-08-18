@@ -1,39 +1,37 @@
-import React from 'react';
-import {View, Text, SafeAreaView, FlatList, StatusBar} from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
+import React from "react";
+import {View, Text, SafeAreaView, FlatList, StatusBar, StyleSheet, Image} from 'react-native';
+//import { NavigationContainer } from '@react-navigation/native';
 
 const Data = [
     {
         name: "EDWARD W. APPLETON, JR",
         id: "1",
         party: "Grassroots Development Movement",
-        imageUrl: require('../../assets/images/presidentsImg/edward-appleton.jpg')
+        imageUrl: require("../../votewise/assets/images/presidentsImg/edward-appleton.jpg")
     },
     {
         name: "JOSEPH N. BOKAI",
         id: "2",
         party: "Unity Party",
-        imageUrl: require('../../assets/images/presidentsImg/joseph-bokai.jpg')
+        imageUrl: require("../../votewise/assets/images/presidentsImg/joseph-boakai.jpg")
     },
     {
         name: "ALLEN R. BROWN, JR",
         id: "3",
         party: "Liberia Restoration Party",
-        imageUrl: require('../../assets/images/presidentsImg/allen-brown.jpg')
+        imageUrl: require("../../votewise/assets/images/presidentsImg/allen-brown.jpg")
     },
-    
-    
     {   name: "ALEXANDER B. CUMMINGS",
         id: "4",
         party: "Collaborating Political Party",
-        imageUrl: require('../../assets/images/presidentsImg/alex-cummings.jpg')
+        imageUrl: require("../../votewise/assets/images/presidentsImg/alex-cummings.jpg")
     },
     {   name: "SIMEON C. M FREEMAN",
-        id: "6",
+        id: "5",
         party: "Movement For Progressive Change",
-        imageUrl: require('../../assets/images/presidentsImg/')
+        imageUrl: require("")
     },
-    {   name: "tIAWAN SAYE GONGLOE",
+    {   name: "TIAWAN SAYE GONGLOE",
         id: "7",
         party: "Liberian's People's Party",
         imageUrl: require("")
@@ -42,12 +40,12 @@ const Data = [
     id: "8",
     party: "All Liberia Coalition Party",
     imageUrl: require("")
- },
- {   name: "DAVID G. B. KIAMU",
- id: "9",
- party: "Democratic People's Party of Liberia",
- imageUrl: require("")
-},
+   },
+   {   name: "DAVID G. B. KIAMU",
+       id: "9",
+       party: "Democratic People's Party of Liberia",
+       imageUrl: require("")
+   },
 {   name: "ALEXANDER N. KOLLIE",
 id: "10",
 party: "Reformers National Congress",
