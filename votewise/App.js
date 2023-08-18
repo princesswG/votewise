@@ -39,8 +39,8 @@ export default function App() {
             // You can return any component that you like here!
             return <FontAwesome name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: '#c0032c',
+          tabBarInactiveTintColor: '#002368',
         })}
       >
 
