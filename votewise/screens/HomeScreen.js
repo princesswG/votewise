@@ -5,18 +5,11 @@ import {View, Text} from 'react-native';
 function HomeScreen(){
     return(
        
-        <View>
-            <Text>this is the home screen</Text>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',fontWeight: 'bold', fontSize: 20}}>
+            <Text>Welcome <br/> VOTE WISE</Text>
         </View>
       
     );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItem: 'center'
-//   }
-// })
 export default HomeScreen;
