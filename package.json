@@ -1,0 +1,19 @@
+{
+  "name": "votewise",
+  "version": "1.0.0",
+  "description": "It provides insights on the ongoing electoral process within Liberia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princesswG/votewise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/princesswG/votewise/issues"
+  },
+  "homepage": "https://github.com/princesswG/votewise#readme"
+}
