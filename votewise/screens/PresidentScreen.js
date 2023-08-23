@@ -7,104 +7,104 @@ const Data = [
         name: "EDWARD W. APPLETON, JR",
         id: 1,
         party: "Grassroots Development Movement",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/edward-appleton.jpg')
     },
     {
         name: "JOSEPH N. BOKAI",
         id: 2,
         party: "Unity Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/joseph-boakai.jpg')
     },
     {
         name: "ALLEN R. BROWN, JR",
         id: 3,
         party: "Liberia Restoration Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/allen-brown.jpg')
     },
     {   name: "ALEXANDER B. CUMMINGS",
         id: 4,
         party: "Collaborating Political Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
     },
     {   name: "SIMEON C. M FREEMAN",
         id: 5,
         party: "Movement For Progressive Change",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/simeon-freeman.jpg')
     },
     {   name: "TIAWAN SAYE GONGLOE",
         id: 6,
         party: "Liberian's People's Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/tiawan-gongloe.jpg')
     },
     {   name: "LUSINEE F. KAMARA, SR",
         id: 7,
         party: "All Liberia Coalition Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/lusinee-kamara.jpg')
     },
     {   name: "DAVID G. B. KIAMU",
         id: 8,
         party: "Democratic People's Party of Liberia",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/david-kiamu.jpg')
     },
     {   name: "ALEXANDER N. KOLLIE",
         id: 9,
         party: "Reformers National Congress",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/alexander-kollie.jpg')
     },
     {   name: "SHEIKH A. KOUYATEH",
         id: 10,
         party: "Liberia First Movement",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/sheikh-kouyateh.jpg')
     },
     {   name: "BENDU ALEHMA KROMAH",
         id: 11,
         party: "Independent Candidate",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/alehma-kromah.jpg')
     },
     {   name: "RICHARD SAYE HILLER",
         id: 12,
         party: "Liberians For Prosperity",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/richard-miller.jpg')
     },
     {   name: "CLARENCE K. MONIBA",
         id: 13,
         party: "Liberian National Union",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/clarence-moniba.jpg')
     },
     {   name: "ROBERT FRANZ MORRIS",
         id: 14,
         party: "Independent Candidate",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/robert-franz-morris.jpg')
     },
     {   name: "SARA BEYSOLOW NYANTI",
         id: 15,
         party: "African Liberation League",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/sara-nyanti.jpg')
     },
     {   name: "WILLIAM WIAH TUIDER",
         id: 16,
         party: "Democratic National Allegiance",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/william-tuder.jpg')
     },
     {   name: "JOSHUA TOM TURNER",
         id: 17,
         party: "New Liberia Party(NLP)",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/joshua-turner.jpg')
     },
     {   name: "GEORGE MANNEH WEAH",
         id: 18,
         party: "Coalition for Democratic Change",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/george-weah.jpg')
     },
     {   name: "JEREMIAH Z. WHAPOE",
         id: 19,
         party: "Vision for Liberia Transformation",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/jeremiah-whapoe.jpg')
     },
     {   name: "LUTHER N. YORFEE",
         id: 20,
         party: "Liberia Rebuiling Party",
-        imageUrl: require('../../votewise/assets/images/presidentsImg/alex-cummings.jpg')
+        image: require('../../votewise/assets/images/presidentsImg/luther-yorfee.jpg')
     }
 
 ]
@@ -132,7 +132,7 @@ function PresidentScreen(){
             marginTop: StatusBar.currentHeight || 0, 
         },
         list: {
-            backgroundColor: '#002368',
+            backgroundColor: 'white',
             borderColor:'#CCCC',
             padding: 20,
             marginVertical: 10,
@@ -141,12 +141,14 @@ function PresidentScreen(){
             shadowColor: '#002368'
         },
          name: {
-            fontSize: 20,
-            color: 'white',
+            fontSize: 30,
+            color: '#002868',
+            fontWeight: 30,
          },
          party: {
-            fontSize: 15,
-            color: '#c0032c'    
+            fontSize: 20,
+            color: '#E21818' ,
+            fontWeight: 30,   
         },
         image: {
             width: 60,
