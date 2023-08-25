@@ -52,7 +52,7 @@ return (
      )}
 
      {selectedCounty !== '' && (
-        <Text>You've selected : {selectedCounty}</Text>
+        <Text>You've selected : {selectedCounty.toLowerCase()}</Text>
      )}
 
         </ScrollView>
