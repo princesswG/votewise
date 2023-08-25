@@ -8,10 +8,10 @@ const Data = [
         title: 'Parties',
         number: '46'
     },
-    {
-        title: 'Precints',
-        number: '2,080',
-    },
+    // {
+    //     title: 'Precints',
+    //     number: '2,080',
+    // },
     {
         title: 'Polling Places',
         number: '5,890',
@@ -40,19 +40,19 @@ function HomeScreen(){
                       </View>
 
                 <View style={styles.textView}>
-                    <Text style={styles.welcomeText}>Be a part of the<Text style={styles.futureText}>Future Liberia</Text>we want and dream of. </Text>
+                    <Text style={styles.welcomeText}>Be a part of the <Text style={styles.futureText}> Future Liberia </Text>we want and dream of. </Text>
                 </View>
 
                 <View style={styles.votersStatsView}>
                     {Data.map((item, index) => (
                         <View key={index}>
-                            <Item title={item.title} number={item.number}></Item>
+                            <Item title={item.title} icon={item.icon} number={item.number}></Item>
                             </View>
                     ))
                 }
                 </View>
                 <View style={styles.newsView}>
-                    <Text style={styles.textTitle}>Recent elections newsView</Text>
+                    <Text style={styles.textTitle}>Recent elections News View</Text>
                     <View>
                         <Image style={styles.newsHeadlineImage} source={images.homeImages.flag_electionBanner}/>
                         <Text style={styles.newsHeadlineText}>October 10, 2023 is Election Day </Text>
@@ -63,37 +63,37 @@ function HomeScreen(){
        );
 }
 const styles = StyleSheet.create({
-    container: {
+    hero: {
         padding: 30,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     title:{
         fontSize: 30,
         color: '#002368',
         fontWeight: 500,
-        marginBottom: 50,
+        marginBottom: 50
     },
     image: {
         width:150,
         height: 150,
-        resizeMode: 'cover', //or other image resizeMode
+        resizeMode: 'cover' //or other image resizeMode
     
     },
     welcomeText: {
         fontSize: 40,
-        color: '#002368',
+        color: '#002368'
     },
     textView: {
         width: 350,
         justifyContent: 'center',
         marginLeft: 35,
-        marginTop: 30,
+        marginTop: 30
     },
     futureText: {
       color: '#c0032c',
-      fontWeight: '600',
+      fontWeight: '600'
     },
     //Voters Flatlist Styles
     voterStats: {
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         textAlign: 'center',
         color: '#c0032c',
-        fontWeight: '500',
+        fontWeight: '500'
     },
     //News view
     newsView: {

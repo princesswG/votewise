@@ -112,8 +112,11 @@ const Data = [
 const Item = ({name, party, image}) =>(
     <View style={styles.list}>
         <Image style={styles.image} source={image} />
+        <View style={styles.infoCard}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.party}>{party}</Text>
+        </View>
+      
 </View>
 )
 
@@ -121,7 +124,10 @@ const Item = ({name, party, image}) =>(
 function PresidentScreen(){
     return(
        <SafeAreaView style={styles.container}>
-        <FlatList data={Data} renderItem={({item}) => <Item image={item.image} name={item.name} party={item.party} /> } keyExtractor={item => item.id}
+        <FlatList 
+        data={Data} 
+        renderItem={({item}) => <Item image={item.image} name={item.name} party={item.party} /> } 
+        keyExtractor={item => item.id}
         />
       </SafeAreaView>
       );
@@ -132,30 +138,40 @@ function PresidentScreen(){
             marginTop: StatusBar.currentHeight || 0, 
         },
         list: {
+            shadowColor: 'black',
+            shadowOffset: {width:0, height: 2},
+            shadowRadius: 4,
+            shadowOpacity: 0.26,
+            elevation: 4,
             backgroundColor: 'white',
-            borderColor:'#CCCC',
             padding: 20,
             marginVertical: 10,
             marginHorizontal: 16,
             borderRadius: 8,
-            shadowColor: '#002368'
+            flexDirection: 'row'
         },
          name: {
-            fontSize: 30,
-            color: '#002868',
-            fontWeight: 30,
+            fontSize: 16,
+            color: '#002368',
+            fontWeight: 50,
+            marginTop: 10
          },
          party: {
-            fontSize: 20,
-            color: '#E21818' ,
-            fontWeight: 30,   
+            fontSize: 13,
+            color: '#c0032c' ,
+            flex: 'wrap',
+            fontWeight: 50   
         },
         image: {
-            width: 60,
-            height: 60,
-            borderRadius: 60,
+            width: 85,
+            height: 85,
+            borderRadius: 100 / 2,
             resizeMode: 'cover', //or other resizeMode
         },
+        infoCard: {
+            flexDirection: 'column',
+            marginLeft: 18
+        }
     });
      
 export default PresidentScreen;
