@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import {View, Text, StyleSheet, Touchable, TouchableOpacity, FlatList, SafeAreaView, Image, SectionList, ScrollView} from 'react-native';
+import { representatives } from '../data/Representatives';
 
 const SelectCounty = () => {
     const [showArrow, setShowArrow] = useState(false);
 const [selectedCounty, setSelectedCounty] = useState('');
+// const [selectedDistrict, setSelectedDistrict] = useState('');
 
-const counties = [
-    'Bomi', 
-    'Gbarpolu', 
-    'GrandBassa',
-    'Grand Cape Mount',
-    'Grand Kru',
-    'Lofa',
-    'Monsterrado',
-    'Nimba',
-    'River Gee',
-    'Sinoe',
-    'RiverCess',
-    'Margibi',
-    'Grand Gedeh',
-    'Bong',
-    'Maryland',
-]; 
+
+
+//const counties = representatives;
+
+
+const repdropdown = representatives;
+const repCounties = Object.keys(representatives)
+
+repCounties.forEach((countyKey) => {
+    const districtKeys = Object.keys(representatives[countyKey])
+
+    console.log(countyKey);
+console.log(`Districts: ${districtKeys.join(", ")}`)
+});
+
 
 const toggleDropdown = () => {
     setShowArrow(!showArrow);
@@ -33,30 +33,43 @@ const selectCounty = (county) => {
 }
 
 return (
-    <View style={styles.container}>
-        <ScrollView>
+    <SafeAreaView style={styles.container}>
+          
             
     <TouchableOpacity onPress={toggleDropdown} style={styles.dropdownHeader}>
         <Text>{selectedCounty || 'Select a county'}</Text>
+
         <Text>{showArrow ? 'Close' : 'Select'}</Text>
      </TouchableOpacity>
 
      {showArrow && (
         <View style={styles.dropdown}>
             {counties.map((ele) => (
-                <TouchableOpacity key={ele} onPress={() => selectCounty(ele)} style={styles.item}>
-                    <Text>{ele}</Text>
+                <TouchableOpacity key={ele} onPress={() => selectCounty(ele)}>
+                    <Text style={styles.senCountiesDrop}>{ele}</Text>
                 </TouchableOpacity>
             ))}
         </View>
      )}
 
-     {selectedCounty !== '' && (
-        <Text>You've selected : {selectedCounty.toLowerCase()}</Text>
-     )}
-
-        </ScrollView>
-   </View>
+        <View>
+            <FlatList data={repdropdown[selectedCounty]}
+          renderItem={({item}) => {
+          return(
+             <View style={styles.repCard}>
+             <Image style={styles.image} source={{uri:item.photo}}/>
+             <Text style={styles.title}>{item.aspirant}{'\n'}{item.number}
+              {'\n'}{item.district}{'\n'}{item.type}{'\n'}{item.party}
+              {'\n'}{item.partyAcronym}{'\n'}{item.county}</Text>
+         </View>
+            
+       
+      )}}
+            keyExtractor={item => item.district}
+     />
+        </View>
+      
+</SafeAreaView>
 );
 }
 

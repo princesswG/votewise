@@ -40,13 +40,16 @@ function HomeScreen(){
                       </View>
 
                 <View style={styles.textView}>
-                    <Text style={styles.welcomeText}>Be a part of the <Text style={styles.futureText}> Future Liberia </Text>we want and dream of. </Text>
+                    <Text style={styles.welcomeText}>Be a part of the 
+                    <Text style={styles.futureText}> Future Liberia 
+                    </Text>we want and dream of. </Text>
                 </View>
 
                 <View style={styles.votersStatsView}>
                     {Data.map((item, index) => (
                         <View key={index}>
-                            <Item title={item.title} icon={item.icon} number={item.number}></Item>
+                            <Item title={item.title} icon={item.icon} 
+                            number={item.number}></Item>
                             </View>
                     ))
                 }
@@ -54,8 +57,10 @@ function HomeScreen(){
                 <View style={styles.newsView}>
                     <Text style={styles.textTitle}>Recent elections News View</Text>
                     <View>
-                        <Image style={styles.newsHeadlineImage} source={images.homeImages.flag_electionBanner}/>
-                        <Text style={styles.newsHeadlineText}>October 10, 2023 is Election Day </Text>
+                        <Image style={styles.newsHeadlineImage} 
+                        source={images.homeImages.flag_electionBanner}/>
+                        <Text style={styles.newsHeadlineText}>
+                            October 10, 2023 is Election Day </Text>
                     </View>
                 </View>
             </ScrollView>

@@ -11,12 +11,14 @@ import SenatorScreen from './screens/SenatorScreen';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
    
   <NavigationContainer>
+    
     <Tab.Navigator
      screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {

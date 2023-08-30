@@ -1,4 +1,4 @@
-const Representatives = [
+export const representatives = 
     {
         "bomi": {
             "district1": [
@@ -7011,4 +7011,4 @@ const Representatives = [
             ]
         }
     }
-]
+

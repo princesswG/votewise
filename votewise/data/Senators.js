@@ -857,7 +857,7 @@ export const senators =
     "RiverCess": [
         {
             "aspirant": "Jay Jonathan Banney",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Rivercess_County.svg_.png",
             "number": "CN-000869",
             "type": "Party",
             "party": "Liberian’s People’s Party",
@@ -866,7 +866,7 @@ export const senators =
         },
         {
             "aspirant": "Francis S. Paye",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Rivercess_County.svg_.png",
             "number": "CN-000510",
             "type": "Party",
             "party": "National Democratic Coalition",
@@ -875,7 +875,7 @@ export const senators =
         },
         {
             "aspirant": "Gabriel B. Smith",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Rivercess_County.svg_.png",
             "number": "CN-000245",
             "type": "Party",
             "party": "Collaborating Political Parties",
@@ -884,7 +884,7 @@ export const senators =
         },
         {
             "aspirant": "Emmanuel Sear Toe",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Rivercess_County.svg_.png",
             "number": "CN-000546",
             "type": "Party",
             "party": "New Liberia Party",
@@ -893,7 +893,7 @@ export const senators =
         },
         {
             "aspirant": "Bill Teah Twehway",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Rivercess_County.svg_.png",
             "number": "CN-000186",
             "type": "Party",
             "party": "Coalition for Democratic Change",
@@ -904,7 +904,7 @@ export const senators =
     "Sinoe": [
         {
             "aspirant": "Crayton O. Duncan",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Sinoe_County.svg_.png",
             "number": "CN-000268",
             "type": "Party",
             "party": "Coalition for Democratic Change",
@@ -913,7 +913,7 @@ export const senators =
         },
         {
             "aspirant": "J. Milton Teahjay",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Sinoe_County.svg_.png",
             "number": "CN-000548",
             "type": "Independent",
             "party": "Independent Candidate",
@@ -922,7 +922,7 @@ export const senators =
         },
         {
             "aspirant": "Matthew Gee Zarzar",
-            "photo": "",
+            "photo": "https://liberiaelections2023.montserradomedia.com/wp-content/uploads/2023/08/Sinoe_County.svg_.png",
             "number": "CN-000311",
             "type": "Independent",
             "party": "Independent Candidate",
