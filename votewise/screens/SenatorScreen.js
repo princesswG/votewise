@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, StatusBar, Touchable, TouchableOpacity, FlatList, SafeAreaView, Image, SectionList, ScrollView } from 'react-native';
 import { senators } from '../data/Senators';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
 
 const SelectCounty = () => {
     const [showArrow, setShowArrow] = useState(false);
-    const [selectedCounty, setSelectedCounty] = useState('');
+    const [selectedCounty, setSelectedCounty] = useState("Montserrado");
 
     // console.log("Counties", Object.keys(senators))
 
@@ -23,6 +24,14 @@ const SelectCounty = () => {
         toggleDropdown(); //close the dropdown after selecting
     }
 
+    const navigation = useNavigation();
+
+    const senatorPress = (item) => {
+      navigation.navigate("SenatorsDetails", {
+        item,
+      });
+    };
+
     return (
         <View>
             <ScrollView>
@@ -31,7 +40,7 @@ const SelectCounty = () => {
 
                     <TouchableOpacity onPress={toggleDropdown} style={styles.dropdownHeader}>
                         <Text>{selectedCounty || 'Select a county'}</Text>
-                        <Text>{showArrow ? 'Close' : 'Select'}</Text>
+                        <Text style={styles.hamburgerIcon}>{showArrow ? "▲" : "▼"}</Text>
                     </TouchableOpacity>
 
                     {showArrow && (
@@ -47,19 +56,16 @@ const SelectCounty = () => {
                     <FlatList data={sendropdown[selectedCounty]}
                         renderItem={({ item }) => {
                             return (
-                                <View style={styles.senatorsCard}>
+                                <TouchableOpacity onPress={() => senatorPress(item)}>
+                                    <View style={styles.senatorsCard}>
                                     <Image style={styles.image} source={{ uri: item.photo }} />
                                     {/* <View style={styles.infoCard}> */}
                                     <Text style={styles.title}>{item.aspirant}{'\n'}{item.party}
                                         {/* {'\n'}{item.number} {'\n'}{item.type}{'\n'}{item.partyAcronym}{'\n'}{item.county} */}
                                     </Text>
                                 </View>
-
-                                //    </View>
-
-
-
-                            )
+                                </TouchableOpacity>
+                            );
                         }}
                         keyExtractor={item => item.number}
                     />

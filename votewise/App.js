@@ -9,15 +9,17 @@ import PresidentScreen from './screens/PresidentScreen';
 import RepresentativeScreen from './screens/RepresentativeScreen';
 import SenatorScreen from './screens/SenatorScreen';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import PresidentDetails from './screens/PresidentDetails';
+import SenatorDetails from './screens/SenatorDetails';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+const Tabs = () => {
   return (
-   
-  <NavigationContainer>
     
     <Tab.Navigator
      screenOptions={({ route }) => ({
@@ -49,17 +51,42 @@ export default function App() {
     <Tab.Screen name='Home' component={HomeScreen} />
     <Tab.Screen name='Presidents' component={PresidentScreen}/>
     <Tab.Screen name='Representatives' component={RepresentativeScreen}/>
-    <Tab.Screen name='Senators' component={SenatorScreen}/>
+    {/* <Tab.Screen name='Senators' component={SenatorScreen}/> */}
     </Tab.Navigator>
-  </NavigationContainer>
+  );
+};
+
+
+
+const Stacks = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen 
+      name='Default'
+      component={Tabs}
+      options={{ headerShown: false}}
+      />
+            <Stack.Screen
+        name="PresidentsDetails"
+        component={PresidentDetails}
+        options={{ title: "Presidential Aspirant Details" }}
+      />
+
+      <Stack.Screen
+        name="SenatorsDetails"
+        component={SenatorDetails}
+        options={{ title: "Senators Aspirant Details" }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stacks />
+    </NavigationContainer>
   );
 }
+ 
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center'
-//   }
-// });
