@@ -152,12 +152,15 @@ const Data = [
 //console.log(Object(Data))
 // const bioinfo = Object.keys(Data)
 
-const biodropdown = Data;
+//const biodropdown = Data;
 // console.log(biodropdown)
 
 const Item = ({ name, party, image, bio }) => (
     <View style={styles.list}>
+        <View>
         <Image style={styles.image} source={image} />
+        </View>
+        
         <View style={styles.infoCard}>
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.party}>{party}</Text>
@@ -167,7 +170,7 @@ const Item = ({ name, party, image, bio }) => (
         </View>
 
     </View>
-)
+);
 
 // const pressLink =() => {
 
