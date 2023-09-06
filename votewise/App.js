@@ -18,7 +18,14 @@ export default function App() {
   return (
    
   <NavigationContainer>
-    
+    <Stack.Navigator>
+    <Stack.Screen 
+    name="PresidentsDetails" 
+    component={PresidentsDetails} 
+    options={{title: 'President Details'}}
+    />
+    </Stack.Navigator>
+   
     <Tab.Navigator
      screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {

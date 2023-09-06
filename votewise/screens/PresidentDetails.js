@@ -1,21 +1,18 @@
-import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PresidentScreen from './PresidentScreen';
+import { useState } from "react";
+import { View, Text,  } from "react-native";
 
-const Stack = createNativeStackNavigator();
+function PresidentsDetails({route}){
+  const [candidateInfo, setCandidateInfo] = useState(route.params.item || null)
 
-const MyStack = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="President Details"
-          component={PresidentScreen}
-          options={{title: 'Welcome'}}
-        />
-        <Stack.Screen name="President Details" component={PresidentScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+  return(
+    <>
+    <View>
+      <Text>President Name: {candidateInfo?.name}</Text>
+      <Text>Party: {candidateInfo?.party}</Text>
+      <Text>Bio: {candidateInfo.bio}</Text>
+      <Text>President {}</Text>
+    </View>
+    </>
+  )
+}
+export default PresidentsDetails
