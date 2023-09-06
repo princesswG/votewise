@@ -20,21 +20,7 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
   return (
-<<<<<<< HEAD
-   
-  <NavigationContainer>
-    <Stack.Navigator>
-    <Stack.Screen 
-    name="PresidentsDetails" 
-    component={PresidentsDetails} 
-    options={{title: 'President Details'}}
-    />
-    </Stack.Navigator>
-   
-=======
-    
->>>>>>> 58718284bc0523043d300433e336b26f77bc80f2
-    <Tab.Navigator
+   <Tab.Navigator
      screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -63,8 +49,8 @@ const Tabs = () => {
 
     <Tab.Screen name='Home' component={HomeScreen} />
     <Tab.Screen name='Presidents' component={PresidentScreen}/>
-    <Tab.Screen name='Representatives' component={RepresentativeScreen}/>
-    {/* <Tab.Screen name='Senators' component={SenatorScreen}/> */}
+    {/* <Tab.Screen name='Representatives' component={RepresentativeScreen}/> */}
+    <Tab.Screen name='Senators' component={SenatorScreen}/>
     </Tab.Navigator>
   );
 };
@@ -80,13 +66,13 @@ const Stacks = () => {
       options={{ headerShown: false}}
       />
             <Stack.Screen
-        name="PresidentsDetails"
+        name="Presidents Details"
         component={PresidentDetails}
         options={{ title: "Presidential Aspirant Details" }}
       />
 
       <Stack.Screen
-        name="SenatorsDetails"
+        name="Senators Details"
         component={SenatorDetails}
         options={{ title: "Senators Aspirant Details" }}
       />
