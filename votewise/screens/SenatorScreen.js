@@ -77,7 +77,7 @@ const SelectCounty = () => {
 
 
     );
-}
+                    }
 
 const styles = StyleSheet.create({
     container: {

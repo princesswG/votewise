@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
 
-function PresidentDetails({ route }) {
+ function PresidentDetails({ route }) {
   const [candidateInfo, setCandidateInfo] = useState(route.params.item || null);
   return (
     <>

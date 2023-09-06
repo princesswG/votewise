@@ -66,13 +66,13 @@ const Stacks = () => {
       options={{ headerShown: false}}
       />
             <Stack.Screen
-        name="Presidents Details"
+        name="PresidentDetails"
         component={PresidentDetails}
         options={{ title: "Presidential Aspirant Details" }}
       />
 
       <Stack.Screen
-        name="Senators Details"
+        name="SenatorDetails"
         component={SenatorDetails}
         options={{ title: "Senators Aspirant Details" }}
       />

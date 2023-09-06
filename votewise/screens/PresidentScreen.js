@@ -193,7 +193,7 @@ function PresidentScreen() {
                 renderItem={({ item }) =>(
                     <TouchableOpacity onPress={() => onPressCandidate(item)}>
                         <Item image={item.image} name={item.name} party={item.party} />
-                        </TouchableOpacity>
+                 </TouchableOpacity>
                 ) 
                 }
                 keyExtractor={(item) => item.id}
