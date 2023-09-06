@@ -152,30 +152,38 @@ const Data = [
 //console.log(Object(Data))
 // const bioinfo = Object.keys(Data)
 
-const biodropdown = Data;
+//const biodropdown = Data;
 // console.log(biodropdown)
 
 const Item = ({ name, party, image, bio }) => (
     <View style={styles.list}>
+        <View>
         <Image style={styles.image} source={image} />
+        </View>
+        
         <View style={styles.infoCard}>
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.party}>{party}</Text>
         </View>
+        <View>
+            <Text>{bio}</Text>
+        </View>
 
     </View>
-)
+);
 
-const pressLink =() => {
+// const pressLink =() => {
 
-}
+// }
 
 function PresidentScreen() {
     const navigation = useNavigation();
-    const onPressCandidate = (id) => {
-        console.log({id})
-        navigation.navigate("Home")
-    }
+    const onPressCandidate = (item) => {
+        // console.log({id})
+        navigation.navigate("PresidentDetails", {
+            item
+        });
+    };
     return (
         
         <SafeAreaView style={styles.container}>
@@ -183,7 +191,7 @@ function PresidentScreen() {
      <FlatList
                 data={Data}
                 renderItem={({ item }) =>(
-                    <TouchableOpacity onPress={() => onPressCandidate(item.id)}>
+                    <TouchableOpacity onPress={() => onPressCandidate(item)}>
                         <Item image={item.image} name={item.name} party={item.party} />
                         </TouchableOpacity>
                 ) 
