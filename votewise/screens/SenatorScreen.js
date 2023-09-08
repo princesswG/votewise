@@ -27,7 +27,7 @@ const SelectCounty = () => {
     const navigation = useNavigation();
 
     const senatorPress = (item) => {
-      navigation.navigate("SenatorsDetails", {
+      navigation.navigate("SenatorDetails", {
         item,
       });
     };
